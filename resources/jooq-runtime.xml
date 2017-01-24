@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://www.jooq.org/xsd/jooq-runtime-3.9.0.xsd">
+  <renderMapping>
+    <schemata>
+      <schema>
+        <input>DEV</input>
+        <output>PREPROD</output>
+      </schema>
+      <schema>
+        <input>LOG</input>
+        <output>PREPROD_LOG</output>
+      </schema>
+    </schemata>
+  </renderMapping>
+</settings>
