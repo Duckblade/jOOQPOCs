@@ -1,8 +1,6 @@
 
 # Created by https://www.gitignore.io/api/eclipse,intellij
 
-target/
-
 ### Eclipse ###
 
 .metadata
@@ -109,4 +107,18 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
-# End of https://www.gitignore.io/api/eclipse,intellij
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Exclude maven wrapper
+!/.mvn/wrapper/maven-wrapper.jar
+
+# End of https://www.gitignore.io/api/intell,intellij,eclipse,maven
