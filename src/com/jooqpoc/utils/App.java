@@ -25,7 +25,7 @@ public class App {
 		// 1- MappedSchema (a customiser dans le QueryBuilder)
 		// 2- Pas de schema (default)
 		// 3- Avec fichier XML (schemas multiples, cf. ressources/jooq-runtime)
-		jooqQueryBuilder.createContext(2);
+		jooqQueryBuilder.createContext(2,"library", "author");
 
 		// Un simple Select initial
 		LOGGER.info("==== INITIAL ====");
@@ -43,7 +43,7 @@ public class App {
 
 		// Update du prenom d'un auteur
 		LOGGER.info("==== UPDATE ====");
-		jooqQueryBuilder.jooqUpdate("UpdatedFirstName", 3);
+		jooqQueryBuilder.jooqUpdate("UpdatedFirstName", 3, "first_name");
 		jooqQueryBuilder.jooqSelect();
 
 		// Supression du dernier auteur cree lors de l'insert (ID a
@@ -54,6 +54,7 @@ public class App {
 
 		//Nettoyage (revert) de ce qui a été fait
 		jooqQueryBuilder.cleanup();
+		jooqQueryBuilder.jooqSelect();
 		LOGGER.info("==== CLEANED AND DONE ====");
 	}
 
