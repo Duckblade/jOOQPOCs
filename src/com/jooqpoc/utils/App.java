@@ -25,6 +25,8 @@ public class App {
 		// 1- MappedSchema (a customiser dans le QueryBuilder)
 		// 2- Pas de schema (default)
 		// 3- Avec fichier XML (schemas multiples, cf. ressources/jooq-runtime)
+		// Choix de la base de donnée cible (si plusieurs sont hebergees)
+		// Choix de la table cible sur laquelle réaliser les select/insert/update)
 		jooqQueryBuilder.createContext(2,"library", "author");
 
 		// Un simple Select initial
@@ -33,7 +35,7 @@ public class App {
 
 		// Une creation de table
 		LOGGER.info("==== CREATE ====");
-		jooqQueryBuilder.jooqCreate();
+		jooqQueryBuilder.jooqCreate("library");
 		jooqQueryBuilder.jooqSelect();
 
 		// Insert d'un auteur avec seul un prenom
